@@ -14,6 +14,8 @@ au BufWinEnter * silent loadview
 
 map ff v%zf
 
+map <C-d> :browse vert diffsplit<CR>
+
 map <C-t> :browse tabnew<CR>
 map <S-Right> :tabnext<CR>:source ~/.vimrc<CR>
 map <S-Left> :tabprev<CR>:source ~/.vimrc<CR>
