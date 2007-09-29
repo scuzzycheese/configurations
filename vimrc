@@ -8,6 +8,7 @@ set noai
 syntax off
 set hlsearch
 syntax off
+set tabpagemax=50
 
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
