@@ -35,3 +35,9 @@ highlight cComment ctermfg=Magenta
 highlight cOPComment ctermfg=Magenta
 syntax region cComment start=/\/\*/ end=/\*\// contains=cComment
 syntax region cOPComment start=/\/\// end=/$/ contains=cOPComment
+
+"this is a work in progrss
+vmap <Tab> :<BS><BS><BS><BS><BS>%s/\%V/\t/<CR>
+vmap <BS> :<BS><BS><BS><BS><BS>%s/\%V\t//<CR>
+smap <Tab> :%s/\%V/\t/<CR>
+smap <BS> :%s/\%V\t//<CR>
