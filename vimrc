@@ -33,6 +33,8 @@ set comments=sl:/**,mb:\ *,elx:\ */
 
 highlight cComment ctermfg=Magenta
 highlight cOPComment ctermfg=Magenta
+highlight cComment guifg=Magenta
+highlight cOPComment guifg=Magenta
 syntax region cComment start=/\/\*/ end=/\*\// contains=cComment
 syntax region cOPComment start=/\/\// end=/$/ contains=cOPComment
 
