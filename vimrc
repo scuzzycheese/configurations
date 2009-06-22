@@ -11,14 +11,14 @@ syntax off
 set tabpagemax=50
 set ignorecase
 
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave * silent! mkview
+au! BufReadPost,BufWritePost * silent loadview
 
 map ff v%zf
 
-map <C-d> :browse vert diffsplit<CR>
+map <C-d> :vert diffsplit<CR>
 
-map <C-t> :browse tabnew<CR>
+map <C-t> :tabnew<CR>
 map <S-Right> :tabnext<CR>:source ~/.vimrc<CR>
 map <S-Left> :tabprev<CR>:source ~/.vimrc<CR>
 
