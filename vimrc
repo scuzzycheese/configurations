@@ -12,7 +12,7 @@ set tabpagemax=50
 set ignorecase
 
 au BufWinLeave * silent! mkview
-au! BufReadPost,BufWritePost * silent loadview
+au BufReadPost,BufWritePost * silent! loadview
 
 map ff v%zf
 
