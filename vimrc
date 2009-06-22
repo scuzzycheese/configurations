@@ -9,6 +9,7 @@ syntax off
 set hlsearch
 syntax off
 set tabpagemax=50
+set ignorecase
 
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
