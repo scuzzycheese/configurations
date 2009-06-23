@@ -15,13 +15,13 @@ set ignorecase
 
 let s:newfile = "false"
 
-function SetNewFileTrue()
+function! SetNewFileTrue()
 	let s:newfile = "true"
 endfunction
 
 au BufNew * call SetNewFileTrue()
 
-function MyLoadView()
+function! MyLoadView()
 	if s:newfile != "true"
 		loadview
 	endif
