@@ -13,7 +13,6 @@ set ignorecase
 
 
 
-"----------nasty little piece of code to handle new buffer errors
 let s:newfile = "false"
 
 function SetNewFileTrue()
@@ -31,7 +30,9 @@ endfunction
 au BufWinLeave * silent! mkview
 au BufWinEnter * call MyLoadView()
 
-"-----------------------
+
+
+
 
 map ff v%zf
 
