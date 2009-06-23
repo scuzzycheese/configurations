@@ -11,8 +11,27 @@ syntax off
 set tabpagemax=50
 set ignorecase
 
+
+
+"----------nasty little piece of code to handle new buffer errors
+let s:newfile = "false"
+
+function SetNewFileTrue()
+	let s:newfile = "true"
+endfunction
+
+au BufNew * call SetNewFileTrue()
+
+function MyLoadView()
+	if s:newfile != "true"
+		loadview
+	endif
+endfunction
+
 au BufWinLeave * silent! mkview
-au BufReadPost,BufWritePost * silent! loadview
+au BufWinEnter * call MyLoadView()
+
+"-----------------------
 
 map ff v%zf
 
