@@ -1,5 +1,9 @@
+filetype off
+filetype plugin off
+filetype indent off
+filetype plugin indent off
+
 set nocp
-filetype plugin on
 
 set t_kb=
 fixdel
