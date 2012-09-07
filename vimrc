@@ -14,6 +14,7 @@ set tabpagemax=50
 set ignorecase
 syntax enable
 syntax on
+set nocompatible
 
 
 
@@ -61,3 +62,9 @@ set comments=sl:/**,mb:\ *,elx:\ */
 
 vnoremap > >gv
 vnoremap < <gv
+
+if has("gui_running")
+	inoremap <C-Space> <C-x><C-u>
+else
+	inoremap <Nul> <C-x><C-u>
+endif
